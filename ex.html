@@ -1,0 +1,875 @@
+<!Doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/home.css">
+ </head>
+ <style>
+ ul li{
+  font-size: 18px;
+  font-weight: 20px;
+ }
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.w-100{
+  height:100vh;
+
+}
+img
+{
+  -webkit-background-size:cover;
+  background-size: cover;
+}
+
+@media only screen and (max-width:767px){
+.navbar-nav{
+  background:white;
+  color:white;
+  border-radius: 20px;
+  box-shadow: 5px; 
+  height:110%;
+}
+.navbar-toggler{
+  padding:1px 5px;
+  font-size:18px;
+  line-weight:0.3;
+}
+
+.navbar-brand{
+  height:60px;
+  width:100px;
+  left:0%;
+  transform: translate(-100%);
+}
+
+}
+
+.Train{
+  background-color: lightblue;
+
+}
+h2
+{
+  color: #ffffff;
+  padding-top: 170px;
+    margin-bottom: 0px;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+    font-family: "Montserrat-Regular", sans-serif;
+}
+.carousel-inner{
+  padding-bottom: 70px;
+}
+.carousel-item{
+padding-left: 10%;
+padding-right: 10%;
+}
+.carousel-item img{
+  width:200px;
+  height:100px;
+  padding-top: 20px;
+}
+.carousel-indicators li{
+background:#000;
+border-radius: 50%;
+margin-left: 20px;
+padding-left: 10px;
+width: 0.5px;
+height: 0.5px;
+}
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  outline:none;
+  border-radius: 200px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+}
+.load{
+  animation:slide 2s;
+}
+.slider{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height:100vh;
+  animation: slide 10s infinite;
+}
+.content{
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+.principal
+{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  letter-spacing:5px; 
+  width: 100%;
+  text-align: center;
+}
+@keyframes slide{
+  0%{
+    background-image: url('img/Komastav.png');
+  }
+  20%{
+    background-image: url('img/amos.png');  }
+  20.01%{
+    background-image: url('img/intel.jpg');
+  }
+
+
+ </style>
+
+
+<body>
+  <div class="container-sm">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+      <a href="#"><img class="navbar-brand ml-5 pl-5" src="img/amos.png" width="175px" height="150px"></a>
+      <button class="navbar-toggler bg-dark" type="button" 
+      data-toggle="collapse" data-target="#menu">
+      <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-5 pl-5">
+        <li class="nav-item">
+          <a class="nav-link text-dark" style="font-size: 20px;" href="#"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link text-dark" href="/categories/" data-toggle="dropdown"><strong>Categories</strong> </a>
+            <ul class="dropdown-menu bg-dark">
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Free online course</a><li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Jobs</a></li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Udemy Free courses</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>Contact</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>About</strong></a>
+        </li>
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+            <button class="btn btn-default bg-light" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+            </div>
+          </div>
+          </form>
+      </ul>
+      <script type="text/javascript">
+        $(document).on('click','ul li',function(){
+          $(this).addClass('active').siblings().removeClass('active')
+        })
+      </script>
+      </div>
+    </nav>
+  </div>
+
+<section>
+  <div class="container-fluid-sm">
+    <div class="slider">
+      <div class="load">
+      </div>
+      <div class="content">
+        <div class="principal">
+          <h1>Website</h1>
+          <p>wlcome to  uavdrone</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container-fluid-sm Train" style="margin-top: 20px; padding-top: 20px;">
+    <h2 class="text-center pb-3"><strong>30,000+ Trained, Single Pilots to Enterprise Teams</strong></h2>
+    <div class="container-fluid-sm Train1 ">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="c owl-carousel">
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+  
+ <script>
+         $(".c").owlCarousel({
+            loop: true,
+            margin:10,
+            autoplay:false,
+            autoplayTimeout:2000,
+            autoplayHoverPause: true,
+            responsive: {
+             0:{
+               items:1,
+             },
+             600:{
+               items:2,
+             },
+             1000:{
+               items:5,
+             }
+           }
+         });
+
+         var textWrapper = document.querySelector('.ml12');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [40,0],
+      translateZ: 0,
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i
+    }).add({
+      targets: '.ml12 .letter',
+      translateX: [0,-30],
+      opacity: [1,0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i
+    });
+      </script>     
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!Doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/home.css">
+    <script type="text/javascript">
+   var textWrapper = document.querySelector('.ml12');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [40,0],
+      translateZ: 0,
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i
+    }).add({
+      targets: '.ml12 .letter',
+      translateX: [0,-30],
+      opacity: [1,0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i
+    });
+
+  </script>
+ </head>
+ <style>
+ ul li{
+  font-size: 18px;
+  font-weight: 20px;
+ }
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.w-100{
+  height:100vh;
+
+}
+img
+{
+  -webkit-background-size:cover;
+  background-size: cover;
+}
+
+@media only screen and (max-width:767px){
+.navbar-nav{
+  background: lightblue;
+  color:white;
+  border-radius: 20px;
+  box-shadow: 5px; 
+}
+.navbar-toggler{
+  padding:1px 5px;
+  font-size:18px;
+  line-weight:0.3;
+}
+
+.navbar-brand{
+  height:60px;
+  width:100px;
+  left:0%;
+}
+}
+.Train{
+  background-color: lightblue;
+
+}
+h2
+{
+  color: #ffffff;
+  padding-top: 170px;
+    margin-bottom: 0px;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+    font-family: "Montserrat-Regular", sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+.load{
+  animation:slide 2s;
+}
+.slider{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height:100vh;
+  animation: slide 10s infinite;
+}
+.content{
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+.principal
+{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  letter-spacing:5px; 
+  width: 100%;
+  text-align: center;
+}
+@keyframes slide{
+  0%{
+    background-image: url('img/Komastav.png');
+  }
+  20%{
+    background-image: url('img/amos.png');  }
+  20.01%{
+    background-image: url('img/intel.jpg');
+  }
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  outline:none;
+  border-radius: 200px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+
+.carousel-inner{
+  padding-bottom: 70px;
+}
+.carousel-item{
+padding-left: 10%;
+padding-right: 10%;
+}
+.carousel-item img{
+  width:200px;
+  height:100px;
+  padding-top: 20px;
+}
+.carousel-indicators li{
+background:#000;
+border-radius: 50%;
+margin-left: 20px;
+padding-left: 10px;
+width: 0.5px;
+height: 0.5px;
+}
+
+ </style>
+
+<body>
+  <div class="container-sm">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+      <a href="#"><img class="navbar-brand ml-5 pl-5" src="img/amos.png" width="175px" height="150px"></a>
+      <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#menu">
+      <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-5 pl-5">
+        <li class="nav-item">
+          <a class="nav-link text-dark" style="font-size: 20px;" href="#"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link text-dark" href="/categories/" data-toggle="dropdown"><strong>Categories</strong> </a>
+            <ul class="dropdown-menu bg-dark">
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Free online course</a><li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Jobs</a></li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Udemy Free courses</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>Contact</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>About</strong></a>
+        </li>
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+            <button class="btn btn-default bg-light" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+            </div>
+          </div>
+          </form>
+      </ul>
+      <script type="text/javascript">
+        $(document).on('click','ul li',function(){
+          $(this).addClass('active').siblings().removeClass('active')
+        })
+      </script>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid-sm">
+    <div class="slider">
+      <div class="load">
+      </div>
+      <div class="content">
+        <div class="principal">
+          <h1>Website</h1>
+          <p>wlcome to  uavdrone</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid-sm Train" style="margin-top: 20px; padding-top: 20px;">
+    <h2 class="text-center pb-3"><strong>30,000+ Trained, Single Pilots to Enterprise Teams</strong></h2>
+    <div class="container-fluid-sm Train1 ">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="c owl-carousel">
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+              <div class="card">
+                <img src="img/Caterpillar.jpg">
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(".c").owlCarousel({
+            loop: true,
+            margin:10,
+            autoplay:false,
+            autoplayTimeout:2000,
+            autoplayHoverPause: true,
+            responsive: {
+             0:{
+               items:1,
+             },
+             600:{
+               items:2,
+             },
+             1000:{
+               items:5,
+             }
+           }
+         });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!Doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/home.css">
+    <script type="text/javascript">
+   var textWrapper = document.querySelector('.ml12');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [40,0],
+      translateZ: 0,
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i
+    }).add({
+      targets: '.ml12 .letter',
+      translateX: [0,-30],
+      opacity: [1,0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i
+    });
+
+  </script>
+ </head>
+ <style>
+ ul li{
+  font-size: 18px;
+  font-weight: 20px;
+ }
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.w-100{
+  height:100vh;
+
+}
+img
+{
+  -webkit-background-size:cover;
+  background-size: cover;
+}
+
+@media only screen and (max-width:767px){
+.navbar-nav{
+  background: lightblue;
+  color:white;
+  border-radius: 20px;
+  box-shadow: 5px; 
+}
+.navbar-toggler{
+  padding:1px 5px;
+  font-size:18px;
+  line-weight:0.3;
+}
+
+.navbar-brand{
+  height:60px;
+  width:100px;
+  left:0%;
+}
+}
+.Train{
+  background-color: lightblue;
+
+}
+h2
+{
+  color: #ffffff;
+  padding-top: 170px;
+    margin-bottom: 0px;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+    font-family: "Montserrat-Regular", sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+.load{
+  animation:slide 2s;
+}
+.slider{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height:100vh;
+  animation: slide 10s infinite;
+}
+.content{
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+.principal
+{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  letter-spacing:5px; 
+  width: 100%;
+  text-align: center;
+}
+@keyframes slide{
+  0%{
+    background-image: url('img/Komastav.png');
+  }
+  20%{
+    background-image: url('img/amos.png');  }
+  20.01%{
+    background-image: url('img/intel.jpg');
+  }
+
+
+.carousel-inner{
+  padding-bottom: 70px;
+}
+.carousel-item{
+padding-left: 10%;
+padding-right: 10%;
+}
+.carousel-item img{
+  width:200px;
+  height:100px;
+  padding-top: 20px;
+}
+.carousel-indicators li{
+background:#000;
+border-radius: 50%;
+margin-left: 20px;
+padding-left: 10px;
+width: 0.5px;
+height: 0.5px;
+}
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  outline:none;
+  border-radius: 200px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+
+ </style>
+
+<body>
+  <div class="container-sm">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+      <a href="#"><img class="navbar-brand ml-5 pl-5" src="img/amos.png" width="175px" height="150px"></a>
+      <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#menu">
+      <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-5 pl-5">
+        <li class="nav-item">
+          <a class="nav-link text-dark" style="font-size: 20px;" href="#"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link text-dark" href="/categories/" data-toggle="dropdown"><strong>Categories</strong> </a>
+            <ul class="dropdown-menu bg-dark">
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Free online course</a><li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Jobs</a></li>
+            <li class="dropdown-item bg-dark"><a class="nav-link text-light" href="#">Udemy Free courses</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>Contact</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><strong>About</strong></a>
+        </li>
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+            <button class="btn btn-default bg-light" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+            </div>
+          </div>
+          </form>
+      </ul>
+      <script type="text/javascript">
+        $(document).on('click','ul li',function(){
+          $(this).addClass('active').siblings().removeClass('active')
+        })
+      </script>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid-sm">
+    <div class="slider">
+      <div class="load">
+      </div>
+      <div class="content">
+        <div class="principal">
+          <h1>Website</h1>
+          <p>wlcome to  uavdrone</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    $(".c").owlCarousel({
+            loop: true,
+            margin:10,
+            autoplay:false,
+            autoplayTimeout:2000,
+            autoplayHoverPause: true,
+            responsive: {
+             0:{
+               items:1,
+             },
+             600:{
+               items:2,
+             },
+             1000:{
+               items:5,
+             }
+           }
+         });
+  </script>
+</body>
+</html>
+
